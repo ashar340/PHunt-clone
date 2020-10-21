@@ -1,0 +1,7 @@
+{
+  "name": "PHunt",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
