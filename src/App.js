@@ -7,7 +7,7 @@ import {
   IonTabButton,
   IonIcon,
   IonLabel,
-  IonTabs
+  IonTabs,
 } from "@ionic/react";
 
 import {
@@ -15,7 +15,7 @@ import {
   listCircleOutline,
   trendingUpOutline,
   searchOutline,
-  personCircleOutline
+  personCircleOutline,
 } from "ionicons/icons";
 import { IonReactRouter } from "@ionic/react-router";
 import Home from "./pages/Home";
@@ -49,13 +49,17 @@ const App = () => {
       <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
+            <Route
+              path="/"
+              render={() => <Redirect to="/home" />}
+              exact={true}
+            />
             <Route path="/home" component={Home} />
             <Route path="/profile" component={Profile} />
             <Route path="/trending" component={Trending} />
             <Route path="/submit" component={Submit} />
             <Route path="/search" component={Search} />
-            <Route path="/" render={() => <Redirect to="/home" />} />
-            <Route compoennt={() => <Redirect to="/home" />} />
+            <Route component={() => <Redirect to="/home" />} />
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
             <IonTabButton tab="home" href="/home">

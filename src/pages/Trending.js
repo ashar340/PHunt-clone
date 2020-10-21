@@ -7,6 +7,7 @@ import "./Home.css";
 const Trending = () => {
   return (
     <IonPage>
+    <p>new</p>
       <SmallHeader title="Trending" />
       <IonContent fullscreen>
         <LargeHeader title="Trending" />
