@@ -1,15 +1,16 @@
-import { IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react";
+import { IonPage, IonContent } from "@ionic/react";
+import SmallHeader from "../components/Header/SmallHeader";
+import LargeHeader from "../components/Header/LargeHeader";
 import React from "react";
 import "./Home.css";
 
 const Submit = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Submit</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <SmallHeader title="Submit" />
+      <IonContent fullscreen>
+        <LargeHeader title="Submit" />
+      </IonContent>
     </IonPage>
   );
 };

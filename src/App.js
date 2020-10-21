@@ -7,7 +7,7 @@ import {
   IonTabButton,
   IonIcon,
   IonLabel,
-  IonTabs,
+  IonTabs
 } from "@ionic/react";
 
 import {
@@ -15,7 +15,7 @@ import {
   listCircleOutline,
   trendingUpOutline,
   searchOutline,
-  personCircleOutline,
+  personCircleOutline
 } from "ionicons/icons";
 import { IonReactRouter } from "@ionic/react-router";
 import Home from "./pages/Home";
@@ -49,13 +49,12 @@ const App = () => {
       <IonReactRouter>
         <IonTabs>
           <IonRouterOutlet>
-            <Route path="/home" component={Home} exact={true} />
-            <Route path="/" render={() => <Redirect to="/home" />} />
             <Route path="/home" component={Home} />
             <Route path="/profile" component={Profile} />
             <Route path="/trending" component={Trending} />
             <Route path="/submit" component={Submit} />
             <Route path="/search" component={Search} />
+            <Route path="/" render={() => <Redirect to="/home" />} />
             <Route compoennt={() => <Redirect to="/home" />} />
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
@@ -63,19 +62,19 @@ const App = () => {
               <IonIcon icon={listCircleOutline} />
               <IonLabel>Hunt</IonLabel>
             </IonTabButton>
-            <IonTabButton tab="home" href="/home">
+            <IonTabButton tab="trending" href="/trending">
               <IonIcon icon={trendingUpOutline} />
               <IonLabel>Trending</IonLabel>
             </IonTabButton>
-            <IonTabButton tab="home" href="/home">
+            <IonTabButton tab="submit" href="/submit">
               <IonIcon icon={createOutline} />
               <IonLabel>Submit</IonLabel>
             </IonTabButton>
-            <IonTabButton tab="home" href="/home">
+            <IonTabButton tab="search" href="/search">
               <IonIcon icon={searchOutline} />
               <IonLabel>Search</IonLabel>
             </IonTabButton>
-            <IonTabButton tab="home" href="/home">
+            <IonTabButton tab="profile" href="/profile">
               <IonIcon icon={personCircleOutline} />
               <IonLabel>Profile</IonLabel>
             </IonTabButton>
